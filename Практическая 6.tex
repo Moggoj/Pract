@@ -1,0 +1,74 @@
+\documentclass[a4paper,11pt,]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{ifthen}
+\title{практическая работа N6}
+\author{студент Пономарев В.В. группы 8871}
+\begin{document}
+\maketitle
+% 13% от 5 = 0.65 что является радиусом окружности второго вектора
+\begin{tikzpicture}[scale=0.8]
+\newcommand{\W}{15};
+\newcommand{\D}{5};
+\newcommand{\F}{0.65};
+\draw[thin,->] (-6,0) -- (6,0) node[right] {$X$};
+\draw[thin,->] (0,-6) -- (0,6) node[left] {$Y$};
+\draw[smooth,->] (0,0) -- (5,0)[red];
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W)},{\D*sin(\W)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*2)},{\D*sin(\W*2)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*3)},{\D*sin(\W*3)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*4)},{\D*sin(\W*4)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*5)},{\D*sin(\W*5)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*6)},{\D*sin(\W*6)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*7)},{\D*sin(\W*7)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*8)},{\D*sin(\W*8)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*9)},{\D*sin(\W*9)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*10)},{\D*sin(\W*10)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*11)},{\D*sin(\W*11)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*12)},{\D*sin(\W*12)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*13)},{\D*sin(\W*13)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*14)},{\D*sin(\W*14)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*15)},{\D*sin(\W*15)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*16)},{\D*sin(\W*16)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*17)},{\D*sin(\W*17)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*18)},{\D*sin(\W*18)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*19)},{\D*sin(\W*19)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*20)},{\D*sin(\W*20)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*21)},{\D*sin(\W*21)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*22)},{\D*sin(\W*22)});
+\draw[smooth,red,->] (0,0) -- ({\D*cos(\W*23)},{\D*sin(\W*23)});
+\draw[smooth,cyan,->] (5,0) -- (5.65,0);
+\draw[smooth,cyan,->] ({\D*cos(\W*1)},{\D*sin(\W*1)}) -- ({\D*cos(\W*1)+\F*cos(\W*3)},{\D*sin(\W*1)+\F*sin(\W*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*2)},{\D*sin(\W*2)}) -- ({\D*cos(\W*2)+\F*cos(\W*2*3)},{\D*sin(\W*2)+\F*sin(\W*2*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*3)},{\D*sin(\W*3)}) -- ({\D*cos(\W*3)+\F*cos(\W*3*3)},{\D*sin(\W*3)+\F*sin(\W*3*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*4)},{\D*sin(\W*4)}) -- ({\D*cos(\W*4)+\F*cos(\W*4*3)},{\D*sin(\W*4)+\F*sin(\W*4*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*5)},{\D*sin(\W*5)}) -- ({\D*cos(\W*5)+\F*cos(\W*5*3)},{\D*sin(\W*5)+\F*sin(\W*5*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*6)},{\D*sin(\W*6)}) -- ({\D*cos(\W*6)+\F*cos(\W*6*3)},{\D*sin(\W*6)+\F*sin(\W*6*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*7)},{\D*sin(\W*7)}) -- ({\D*cos(\W*7)+\F*cos(\W*7*3)},{\D*sin(\W*7)+\F*sin(\W*7*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*8)},{\D*sin(\W*8)}) -- ({\D*cos(\W*8)+\F*cos(\W*8*3)},{\D*sin(\W*8)+\F*sin(\W*8*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*9)},{\D*sin(\W*9)}) -- ({\D*cos(\W*9)+\F*cos(\W*9*3)},{\D*sin(\W*9)+\F*sin(\W*9*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*10)},{\D*sin(\W*10)}) -- ({\D*cos(\W*10)+\F*cos(\W*10*3)},{\D*sin(\W*10)+\F*sin(\W*10*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*11)},{\D*sin(\W*11)}) -- ({\D*cos(\W*11)+\F*cos(\W*11*3)},{\D*sin(\W*11)+\F*sin(\W*11*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*12)},{\D*sin(\W*12)}) -- ({\D*cos(\W*12)+\F*cos(\W*12*3)},{\D*sin(\W*12)+\F*sin(\W*12*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*13)},{\D*sin(\W*13)}) -- ({\D*cos(\W*13)+\F*cos(\W*13*3)},{\D*sin(\W*13)+\F*sin(\W*13*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*14)},{\D*sin(\W*14)}) -- ({\D*cos(\W*14)+\F*cos(\W*14*3)},{\D*sin(\W*14)+\F*sin(\W*14*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*15)},{\D*sin(\W*15)}) -- ({\D*cos(\W*15)+\F*cos(\W*15*3)},{\D*sin(\W*15)+\F*sin(\W*15*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*16)},{\D*sin(\W*16)}) -- ({\D*cos(\W*16)+\F*cos(\W*16*3)},{\D*sin(\W*16)+\F*sin(\W*16*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*17)},{\D*sin(\W*17)}) -- ({\D*cos(\W*17)+\F*cos(\W*17*3)},{\D*sin(\W*17)+\F*sin(\W*17*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*18)},{\D*sin(\W*18)}) -- ({\D*cos(\W*18)+\F*cos(\W*18*3)},{\D*sin(\W*18)+\F*sin(\W*18*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*19)},{\D*sin(\W*19)}) -- ({\D*cos(\W*19)+\F*cos(\W*19*3)},{\D*sin(\W*19)+\F*sin(\W*19*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*20)},{\D*sin(\W*20)}) -- ({\D*cos(\W*20)+\F*cos(\W*20*3)},{\D*sin(\W*20)+\F*sin(\W*20*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*21)},{\D*sin(\W*21)}) -- ({\D*cos(\W*21)+\F*cos(\W*21*3)},{\D*sin(\W*21)+\F*sin(\W*21*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*22)},{\D*sin(\W*22)}) -- ({\D*cos(\W*22)+\F*cos(\W*22*3)},{\D*sin(\W*22)+\F*sin(\W*22*3)});
+\draw[smooth,cyan,->] ({\D*cos(\W*23)},{\D*sin(\W*23)}) -- ({\D*cos(\W*23)+\F*cos(\W*23*3)},{\D*sin(\W*23)+\F*sin(\W*23*3)});
+\end{tikzpicture}
+\end{document}
+5*cos(15)*cos(15*3)-5*sin(15)*sin(15*3)
+
+
+
+
+

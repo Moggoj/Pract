@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\usepackage{booktabs}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\title{Практическая работа №5}
+\author{студент:Пономарев В.В.    группы 8871    }
+
+\begin{document}
+\maketitle
+\begin{center}
+Дана функция (ДНФ):
+$$
+F=(B\overline{C}D)+(A\overline{D})+(BC)
+$$
+СКНФ
+$$
+(A+B+C+D)(A+B+C+\overline{D})(A+B+\overline{C}+D)(A+B+\overline{C}+\overline{D})(A+\overline{B}+C+D)(\overline{A}+B+C+\overline{D})
+(\overline{A}+B+\overline{C}+\overline{D})
+$$
+СДНФ
+$$
+\overline{A}B\overline{C}D+\overline{A}BC\overline{D}+\overline{A}BCD+A\overline{B}\overline{C}\overline{D}+A\overline{B}C\overline{D}+
+AB\overline{C}\overline{D}+AB\overline{C}D+ABC\overline{D}+ABCD
+$$
+
+Карты Карно
+
+\begin{tikzpicture}
+\draw[step=1cm] (0,0) grid (5,5);
+\filldraw[blue!40!white,draw=black] (0,0) rectangle (1,5) (0,5) rectangle (5,4)
+(0,0) grid (1,5) (0,5) grid (5,4); 
+\draw (0.5,4.5) node{\footnotesize AB/CD} (1.5,4.5) node{00} (2.5,4.5) node{01} (3.5,4.5) node{10} (4.5,4.5) node{11}
+(0.5,3.5) node{00} (0.5,2.5) node{01} (0.5,1.5) node{10} (0.5,0.5) node{11}
+(1.5,3.5) node{0} (1.5,2.5) node{0} (1.5,1.5) node{1} (1.5,0.5) node{1}
+(2.5,3.5) node{0} (2.5,2.5) node{1} (2.5,1.5) node{1} (2.5,0.5) node{0}
+(3.5,3.5) node{0} (3.5,2.5) node{1} (3.5,1.5) node{1} (3.5,0.5) node{0}
+(4.5,3.5) node{0} (4.5,2.5) node{1} (4.5,1.5) node{1} (4.5,0.5) node{1};
+\draw[thin,->] (-0.2,4) -- (-0.2,1) node[left]{AB};
+\draw[thin,->] (1,5.2) -- (4,5.2) node[right]{CD};
+\end{tikzpicture}
+\end{center}
+\begin{landscape}
+\centering Таблица истинности
+
+\begin{table}[ht]
+\begin{tabular}{ |c|c|c|c|c|c|c|c|c|c|c|c|c| }
+\toprule
+\multirow{2}{*}{в 16-тичной системе} &\multicolumn{4}{|c|}{аргументы}& 
+\multicolumn{8}{|c|}{Логические операции}\\
+\cmidrule{2-13}&
+\multicolumn{1}{|c|}{A}& \multicolumn{1}{|c|}{B}& \multicolumn{1}{|c|}{C}& \multicolumn{1}{|c|}{D}& \multicolumn{1}{c}{$\overline{C}$}&
+\multicolumn{1}{|c|}{$B\overline{C}$}& \multicolumn{1}{c}{$B\overline{C}D$}& \multicolumn{1}{|c|}{$\overline{D}$}&
+\multicolumn{1}{|c|}{$A\overline{D}$}& \multicolumn{1}{|c|}{$(B\overline{C}D)V(A\overline{D})$}& \multicolumn{1}{|c|}{$BC$}& \multicolumn{1}{|c|}{$(B\overline{C}D)V(A\overline{D})V(BC)$} \\
+\midrule 
+0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+1 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+2 & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0 \\
+3 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\ 
+4 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+5 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 \\
+6 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 \\
+7 & 0 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 \\
+8 & 1 & 0 & 0 & 0 & 1 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+9 & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+10 & 1 & 0 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 & 1 \\
+11 & 1 & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+12 & 1 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 1 & 1 & 0 & 1 \\
+13 & 1 & 1 & 0 & 1 & 1 & 1 & 1 & 0 & 0 & 1 & 0 & 1 \\
+14 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 \\
+15 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+\end{document}

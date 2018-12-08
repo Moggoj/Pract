@@ -1,0 +1,23 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{tikz}
+\usepackage[european,cuteinductors,smartlabels]{circuitikz}
+\title{практическая работа N3}
+\author{студент Пономарев В.В. группы 8871}
+\begin{document}
+\maketitle
+\begin{tikzpicture}
+\begin {scope} [scale=0.8]
+\draw[thin,->] (-6,0) -- (6,0) node[right] {$X$};
+\draw[thin,->] (0,-6) -- (0,6) node[left] {$Y$};
+\foreach \x\xtext in {-5/-5,5/5,4/4,-4/-4,3/3,-3/-3,2/2,-2/-2,1/1,-1/1,0/0,3.15/3.15}
+\draw(\x,0.1) -- (\x,-0.1) node[above] {$\xtext$};
+\draw[domain=-2:4, help lines, smooth]
+plot ({\x},{(\x)*(\x)*(\x)-3.5*(\x)*(\x)-1.5*(\x)+9});
+\draw[domain=3:4.2, help lines, smooth,green] plot ({\x},{(10.75*(\x))-33.875});
+\draw[domain=2.8:3.5, help lines, smooth,pink] plot ({\x},{(6.2175*(\x))-18.783});
+\end{scope}
+\end{tikzpicture}
+\end{document}
